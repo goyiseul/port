@@ -1,0 +1,179 @@
+@charset "utf-8";
+$colorW : #fff;
+$colorB : #A49381;
+$colorG : #4C6235;
+$colorY : #F7E880;
+$colorA : #A1BBB2;
+$font : #333;
+@mixin clear{
+    &:after{
+        content:'';
+        display:block;
+        clear:both;
+    }
+}
+body{
+    font:15px/1.5 'Noto Sans KR','Dancing Script', 'Abril Fatface', sans-serif;
+    background:$colorW;
+    color:$font;
+}
+.notext{
+    display:none;
+}
+a, a:link{
+    color:inherit;
+    text-decoration:none;
+}
+// header
+#go2seul_header{
+    width:1300px;
+    // height:300px;
+    position:fixed;
+    left:50%;
+    transform:translateX(-50%);
+    z-index:999;
+    #main_nav_wrap{
+        position:absolute;
+        right:0;
+        top:120px;
+        #main_nav{
+            font-family:'Dancing Script';
+            text-align:right;
+            color:$colorB;
+            >li{
+                font-size:30px;
+                margin:10px 0;
+                &hover a:after{
+                    background:$colorY;
+
+                }
+                >a{
+                    display:block;
+                    width:100%;
+                    height:100%;
+                }
+            }
+        }
+    }
+}
+// #home
+#home{
+    width:100%;
+    height:100vh;
+    // padding:500px 0;
+    box-sizing: border-box;
+    position:relative;
+    &:before{
+        content:'';
+        width:65%;
+        height:2px;
+        background:$font;
+        left:0;
+        position:absolute;
+        bottom:30%;
+    }
+    .home_bg_wrap{
+        width:100%;
+        height:350px;
+        overflow:hidden;
+        position:absolute;
+        top:50%;
+        transform:translateY(-50%);
+        .home_bg{
+            width:100%;
+            height:100%;
+            font-size:0;
+            background:url("../images/home_bg.jpg") no-repeat;
+            background-attachment: fixed;
+            background-position:center;
+            background-size:cover;
+            // background-position-y: 200%;
+        }
+    }
+    .home_text{
+        width:1300px;
+        margin:0 auto;
+        text-transform:uppercase;
+        position:absolute;
+        top:24%;
+        left:50%;
+        transform:translateX(-50%);
+        font:95px/1.1 'Abril Fatface';
+        h2{
+            color:$colorG;
+        }
+        h3{
+            color:$colorW;
+            padding-left:50px;
+
+        }
+    }
+    .home_bottom_text{
+        width:1300px;
+        position:absolute;
+        left:50%;
+        transform:translateX(-50%);
+        bottom:28.5%;
+        font-family:'Dancing Script';
+        p{
+            text-align:right;
+            font-size:30px;
+        }
+    }
+}
+// about
+#about{
+    width:100%;
+    height:100vh;
+    .about_title_wrap{
+        position:relative;
+        margin-bottom:200px;
+        .title_text{
+            width:1300px;
+            margin:0 auto;
+            color:$colorG;
+            font-size:60px;
+            text-transform:capitalize;
+            height:68px;
+            font-weight:800;
+        }
+        .title_text_bg{
+            width:100%;
+            height:50px;
+            background:$colorG;
+        }
+        #about_photo{
+            position:absolute;
+            left:50%;
+            top:-33%;
+            transform: translateX(-50%);
+            width:330px;
+            height:330px;
+            img{
+                width:260px;
+                height:260px;
+                border-radius:50%;
+                // width:100%;
+                overflow: hidden;
+                padding:0 35px;
+            }
+            p{
+                text-align:center;
+                margin-top:10px;
+            }
+        }
+    }
+    .about_box{
+        max-width:980px;
+        margin:0 auto;
+        @include clear;
+        .about_box_left{
+            width:50%;
+            float:left;
+        }
+        .about_box_right{
+            width:50%;
+            float:left;
+        }
+    }
+}
