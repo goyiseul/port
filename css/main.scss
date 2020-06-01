@@ -5,12 +5,31 @@ $colorG : #4C6235;
 $colorY : #F7E880;
 $colorA : #A1BBB2;
 $font : #333;
+$fontS : #5A5A5A;
 @mixin clear{
     &:after{
         content:'';
         display:block;
         clear:both;
     }
+}
+@mixin title_bg{
+    position:relative;
+        margin-bottom:200px;
+        .title_text{
+            width:1300px;
+            margin:0 auto;
+            color:$colorG;
+            font-size:60px;
+            text-transform:capitalize;
+            height:68px;
+            font-weight:800;
+        }
+        .title_text_bg{
+            width:100%;
+            height:50px;
+            background:$colorG;
+        }
 }
 @mixin about_title{
     h2{
@@ -177,22 +196,7 @@ a, a:link{
     width:100%;
     height:100vh;
     .about_title_wrap{
-        position:relative;
-        margin-bottom:200px;
-        .title_text{
-            width:1300px;
-            margin:0 auto;
-            color:$colorG;
-            font-size:60px;
-            text-transform:capitalize;
-            height:68px;
-            font-weight:800;
-        }
-        .title_text_bg{
-            width:100%;
-            height:50px;
-            background:$colorG;
-        }
+        @include title_bg;
         #about_photo{
             position:absolute;
             left:50%;
@@ -310,3 +314,54 @@ a, a:link{
     }
 }
 // portfolio
+#portfolio{
+    .port_title_wrap{
+        @include title_bg;
+    }
+    .port_contents_wrap{
+        width:1300px;
+        margin:0 auto;
+        >div{
+            width:100%;
+            height:1000px;
+            .port_img{
+                img{
+                    width:1200px;
+                    margin:0 50px;
+                }
+            }
+            .port_content{
+                width:650px;
+                margin:0 auto;
+                p{
+                    color:$fontS;
+                    margin-bottom:5px;
+                    span{
+                        font-weight:bold;
+                        color:$font;
+                        margin-right:20px;
+                    }
+                }
+                .port_production{
+                    letter-spacing: 8px;
+                }
+                .port_concept, .port_color, .port_info{
+                    letter-spacing: 30px;
+                }
+            }
+            .button{
+                text-align:center;
+                a{
+                    margin:0 auto;
+                    display:block;
+                    width:200px;
+                    height:30px;
+                    color:$colorG;
+                    border:1px solid $colorG;
+                    border-radius:30px;
+                    line-height:30px;
+                }
+            }
+        }
+    }
+}
