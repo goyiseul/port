@@ -2,6 +2,7 @@ body {
   font: 15px/1.5 'Noto Sans KR','Dancing Script', 'Abril Fatface', sans-serif;
   background: #fff;
   color: #333;
+  width: 1920px;
 }
 
 .notext {
@@ -29,24 +30,50 @@ a, a:link {
 }
 
 #go2seul_header #main_nav_wrap #main_nav {
-  font-family: 'Dancing Script';
-  text-align: right;
   color: #A49381;
 }
 
 #go2seul_header #main_nav_wrap #main_nav > li {
+  height: 50px;
+  line-height: 50px;
   font-size: 30px;
   margin: 10px 0;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
-#go2seul_header #main_nav_wrap #main_nav > lihover a:after {
+#go2seul_header #main_nav_wrap #main_nav > li:hover a:before {
+  display: block;
+  content: '';
+  width: 100%;
+  height: 10px;
+  position: absolute;
+  top: 15px;
+  z-index: 0;
   background: #F7E880;
+  top: 49%;
 }
 
 #go2seul_header #main_nav_wrap #main_nav > li > a {
+  text-align: right;
   display: block;
   width: 100%;
+  position: relative;
   height: 100%;
+  text-transform: capitalize;
+}
+
+#go2seul_header #main_nav_wrap #main_nav > li > a span {
+  position: relative;
+  z-index: 90;
+}
+
+#go2seul_header #main_nav_wrap #main_nav > li .nav_ond {
+  background: #F7E880;
+  width: 100%;
+  height: 10px;
+  display: block;
+  margin: 17px 0;
 }
 
 #home {
@@ -70,7 +97,6 @@ a, a:link {
 #home .home_bg_wrap {
   width: 100%;
   height: 350px;
-  overflow: hidden;
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -78,32 +104,33 @@ a, a:link {
 }
 
 #home .home_bg_wrap .home_bg {
+  overflow: hidden;
   width: 100%;
   height: 100%;
   font-size: 0;
   background: url("../images/home_bg.jpg") no-repeat;
   background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
+  background-position: top;
+  background-size: 100%;
 }
 
-#home .home_text {
+#home .home_bg_wrap .home_text {
   width: 1300px;
   margin: 0 auto;
   text-transform: uppercase;
   position: absolute;
-  top: 24%;
+  top: -105px;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   font: 95px/1.1 'Abril Fatface';
 }
 
-#home .home_text h2 {
+#home .home_bg_wrap .home_text h2 {
   color: #4C6235;
 }
 
-#home .home_text h3 {
+#home .home_bg_wrap .home_text h3 {
   color: #fff;
   padding-left: 50px;
 }
@@ -173,8 +200,14 @@ a, a:link {
 }
 
 #about .about_box {
-  max-width: 980px;
+  max-width: 860px;
+  height: 450px;
   margin: 0 auto;
+  padding: 50px 0;
+}
+
+#about .about_box p {
+  margin-left: 5px;
 }
 
 #about .about_box:after {
@@ -185,11 +218,213 @@ a, a:link {
 
 #about .about_box .about_box_left {
   width: 50%;
+  height: 100%;
   float: left;
+}
+
+#about .about_box .about_box_left #about_profile {
+  height: 25%;
+}
+
+#about .about_box .about_box_left #about_profile h2 {
+  width: 80px;
+  padding: 0 5px;
+  position: relative;
+  margin-bottom: 5px;
+}
+
+#about .about_box .about_box_left #about_profile h2:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 8px;
+  display: block;
+  background: #F7E880;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: 0;
+}
+
+#about .about_box .about_box_left #about_profile h2 span {
+  font-size: 20px;
+  font-weight: 900;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 90;
+}
+
+#about .about_box .about_box_left #about_profile p span {
+  font-weight: 900;
+  width: 100px;
+  display: inline-block;
+}
+
+#about .about_box .about_box_left #about_education {
+  height: 35%;
+  padding-top: 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#about .about_box .about_box_left #about_education h2 {
+  width: 80px;
+  padding: 0 5px;
+  position: relative;
+  margin-bottom: 5px;
+}
+
+#about .about_box .about_box_left #about_education h2:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 8px;
+  display: block;
+  background: #F7E880;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: 0;
+}
+
+#about .about_box .about_box_left #about_education h2 span {
+  font-size: 20px;
+  font-weight: 900;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 90;
+}
+
+#about .about_box .about_box_left #about_education h2 {
+  width: 110px;
+}
+
+#about .about_box .about_box_left #about_education p span {
+  font-weight: 900;
+}
+
+#about .about_box .about_box_left #about_license {
+  height: 40%;
+}
+
+#about .about_box .about_box_left #about_license h2 {
+  width: 80px;
+  padding: 0 5px;
+  position: relative;
+  margin-bottom: 5px;
+}
+
+#about .about_box .about_box_left #about_license h2:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 8px;
+  display: block;
+  background: #F7E880;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: 0;
+}
+
+#about .about_box .about_box_left #about_license h2 span {
+  font-size: 20px;
+  font-weight: 900;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 90;
+}
+
+#about .about_box .about_box_left #about_license p span {
+  font-weight: 900;
+  margin-right: 20px;
 }
 
 #about .about_box .about_box_right {
   width: 50%;
+  height: 100%;
   float: left;
+}
+
+#about .about_box .about_box_right #about_skill {
+  width: 100%;
+  height: 100%;
+}
+
+#about .about_box .about_box_right #about_skill h2 {
+  width: 80px;
+  padding: 0 5px;
+  position: relative;
+  margin-bottom: 5px;
+}
+
+#about .about_box .about_box_right #about_skill h2:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 8px;
+  display: block;
+  background: #F7E880;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: 0;
+}
+
+#about .about_box .about_box_right #about_skill h2 span {
+  font-size: 20px;
+  font-weight: 900;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 90;
+}
+
+#about .about_box .about_box_right #about_skill h2 {
+  width: 50px;
+  margin-bottom: 30px;
+}
+
+#about .about_box .about_box_right #about_skill #skill_box > div {
+  margin-bottom: 25px;
+}
+
+#about .about_box .about_box_right #about_skill #skill_box > div:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+#about .about_box .about_box_right #about_skill #skill_box > div > div {
+  font-size: 0;
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  background: url("../images/skill_icon.png") no-repeat;
+  background-size: 500%;
+  float: left;
+}
+
+#about .about_box .about_box_right #about_skill #skill_box > div > div p {
+  float: left;
+}
+
+#about .about_box .about_box_right #about_skill #skill_box > div #skill_box2 {
+  background-position-x: -50px;
+}
+
+#about .about_box .about_box_right #about_skill #skill_box > div #skill_box3 {
+  background-position-x: -100px;
+}
+
+#about .about_box .about_box_right #about_skill #skill_box > div #skill_box4 {
+  background-position-x: -150px;
+}
+
+#about .about_box .about_box_right #about_skill #skill_box > div #skill_box5 {
+  background-position-x: -200px;
 }
 /*# sourceMappingURL=main.css.map */
