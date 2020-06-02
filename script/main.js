@@ -7,7 +7,7 @@ function nav(){
         if($(this).hasClass('on')){
             $(this).removeClass('on');
             $('#main_nav_wrap').animate({
-                right:-285
+                right:-275
             });
             $('#bar1').removeClass('bar1_on');
             $('#bar2').removeClass('bar2_on');
