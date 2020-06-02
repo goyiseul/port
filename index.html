@@ -8,18 +8,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Dancing+Script&family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/9649766bc4.js" crossorigin="anonymous"></script>
     <link href="css/main.css" rel="stylesheet">
-    <!-- <script src="//code.jquery.com/jquery-latest.min.js"></script> -->
+    <script src="script/jquery-1.12.4.min.js"></script>
 </head>
 <body>
     <h1 class="notext">웹디자이너 고이슬 포트폴리오</h1>
     <header id="go2seul_header">
         <h1 class="notext">메인 네비게이션으로 구성</h1>
         <nav id="main_nav_wrap">
+            <div id="nav_img">
+                <i class="fas fa-laugh-wink"></i>
+            </div>
+            <div id="nav_btn">
+                <div id="bar1"></div>
+                <div id="bar2"></div>
+            </div>
             <ul id="main_nav">
-                <li><a href="#" class="nav_on"><span>home</span></a></li>
-                <li><a href="#"><span>about</span></a></li>
-                <li><a href="#"><span>portfolio</span></a></li>
-                <li><a href="#"><span>contact</span></a></li>
+                <li><a data-scroll="home" href="#home"><span>home</span></a></li>
+                <li><a data-scroll="about" href="#about"><span>about</span></a></li>
+                <li><a data-scroll="portfolio" href="#portfolio"><span>portfolio</span></a></li>
+                <li><a data-scroll="contact" href="#contact"><span>contact</span></a></li>
             </ul>
         </nav>
     </header>
@@ -112,6 +119,7 @@
         <div class="port_contents_wrap">
             <div id=port_contents1><!--포트 폴리오 작품-->
                 <div class="port_img">
+                    <p>harang design</p>
                     <img src="images/harang.png" alt="하랑디자인">
                 </div>
                 <div class="port_content">
@@ -134,6 +142,7 @@
             </div><!--포트 폴리오 작품 끝-->
             <div id=port_contents2><!--포트 폴리오 작품-->
                 <div class="port_img">
+                    <p>instagram</p>
                     <img src="images/instagram.png" alt="instagram">
                 </div>
                 <div class="port_content">
@@ -151,6 +160,7 @@
             </div><!--포트 폴리오 작품 끝-->
             <div id=port_contents3><!--포트 폴리오 작품-->
                 <div class="port_img">
+                    <p>yuhanrox</p>
                     <img src="images/yuhanrox.png" alt="유한락스">
                 </div>
                 <div class="port_content">
@@ -221,6 +231,7 @@
             <h2>thank you.</h2>
         </div>
     </section><!--contact end-->
+    <script src="script/window_scroll.js"></script>
     <script src="script/main.js"></script>
 </body>
 </html>

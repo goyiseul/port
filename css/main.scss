@@ -82,43 +82,123 @@ a, a:link{
 }
 // header
 #go2seul_header{
-    width:1300px;
+    // width:1300px;
     // height:300px;
-    position:fixed;
-    left:50%;
-    transform:translateX(-50%);
-    z-index:999;
+    // position:fixed;
+    // left:50%;
+    // transform:translateX(-50%);
+    // z-index:999;
     #main_nav_wrap{
-        position:absolute;
-        right:0;
-        top:100px;
+        position:fixed;
+        right:-285px;
+        top:0;
+        background:$colorY;
+        width:300px;
+        height:100%;
+        z-index:999;
+        #nav_img{
+            width:150px;
+            margin:50px auto;
+            text-align:center;
+            color:$colorG;
+            color:lighten($colorG, 20%);
+            font-size:100px;
+        }
+        #nav_btn{
+            width:50px;
+            height:50px;
+            position:absolute;
+            top:50%;
+            left:-25px;
+            transform:translateY(-50%);
+            background:$colorY;
+            border-radius:50%;
+            div{
+                background:$colorW;
+                width:20px;
+                height:3px;
+                border-radius:10px;
+                position:absolute;
+                left:10px;
+                transition:all 0.3s;
+            }
+            #bar1{
+                transform:rotate(-40deg);
+                top:18px;
+            }
+            #bar2{
+                bottom:17px;
+                transform:rotate(40deg);
+            }
+            .bar1_on{
+                transform:rotate(40deg) !important;
+            }
+            .bar2_on{
+                transform:rotate(-40deg) !important;
+            }
+        }
         #main_nav{
             // font-family:'Dancing Script';
-            color:$colorB;
+            color:$colorG;
             >li{
+                width:40%;
                 height:50px;
                 line-height:50px;
-                font-size:30px;
-                margin:10px 0;
+                font-size:20px;
+                margin:10px auto;
                 transition:all 0.5s;
                 &:hover a:before{
-                    display:block;
-                    content:'';
-                    width:100%;
-                    height:10px;
-                    position:absolute;
-                    top:15px;
-                    z-index:0;
-                    background:$colorY;
-                    top:49%;
+                    animation:trans_lineL 0.8s;
+                    opacity: 1;
+                }
+                &:hover a:after{
+                    animation:trans_lineR 0.8s;
+                    opacity: 1;
+                }
+                @keyframes trans_lineL{
+                    0%{
+                        opacity:0;
+                        left:50%;
+                
+                    }
+                    100%{
+                        opacity: 1;
+                        left:0;
+                    }
+                }
+                @keyframes trans_lineR{
+                    0%{
+                        opacity:0;
+                        right:50%;
+                
+                    }
+                    100%{
+                        opacity: 1;
+                        right:0;
+                    }
                 }
                 >a{
-                    text-align:right;
+                    text-align:center;
                     display:block;
                     width:100%;
                     position:relative;
                     height:100%;
                     text-transform:capitalize;
+                    font-weight:900;
+                    &:before{
+                        position:absolute;
+                        content:'[';
+                        display:inline-block;
+                        left:0;
+                        opacity: 0;
+                    }
+                    &:after{
+                        position:absolute;
+                        content:']';
+                        display:inline-block;
+                        right:0;
+                        opacity: 0;
+                    }
                     span{
                         position:relative;
                         z-index:90;
@@ -135,6 +215,11 @@ a, a:link{
         }
     }
 }
+// .active{
+//     border-left:1px solid $colorG;
+//     border-right:1px solid $colorG;
+//     border-radius: 5px;
+// }
 // #home
 #home{
     width:100%;
@@ -146,7 +231,7 @@ a, a:link{
         content:'';
         width:65%;
         height:2px;
-        background:$font;
+        background:darken($colorB,40%);;
         left:0;
         position:absolute;
         bottom:30%;
@@ -162,9 +247,9 @@ a, a:link{
             width:100%;
             height:100%;
             font-size:0;
-            background:url("../images/home_bg2.jpg") no-repeat;
+            background:url("../images/home_bg.jpg") no-repeat;
             background-attachment: fixed;
-            background-position:center 33%;
+            background-position:center 8%;
             background-size:cover;
         }
         .home_text{
@@ -192,6 +277,7 @@ a, a:link{
         left:50%;
         transform:translateX(-50%);
         bottom:28.5%;
+        color:darken($colorB,40%);
         font-family:'Dancing Script';
         p{
             text-align:right;
@@ -202,7 +288,7 @@ a, a:link{
 // about
 #about{
     width:100%;
-    height:1080px;
+    height:1000px;
     .about_title_wrap{
         @include title_bg;
         #about_photo{
@@ -333,9 +419,14 @@ a, a:link{
             width:100%;
             margin-bottom:100px;
             .port_img{
-                img{
-                    width:1200px;
-                    margin:0 50px;
+                width:600px;
+                margin:0 auto;
+                p{
+                    text-align:center;
+                    font-size:50px;
+                    text-transform:uppercase;
+                    margin:0 0 20px 0;
+                    font-weight:900;
                 }
             }
             .port_content{
@@ -464,10 +555,11 @@ a, a:link{
     .contact_title{
         width:1300px;
         margin:0 auto;
-        height:127px;
+        height:108px;
         h2{
             color:$colorA;
-            font-size:110px;
+            font:120px/1.1 'Abril Fatface';
+            text-transform:capitalize;
         }
     }
     .contact_bg{
@@ -494,7 +586,7 @@ a, a:link{
                 transform:translate(-50%,-50%);
                 color:$colorW;
                 font-size:20px;
-                padding-top:60px;
+                padding-top:70px;
                 li{
                     margin:0px 0 5px 0;
                     i{
@@ -509,6 +601,7 @@ a, a:link{
     .contact_bottom_text{
         width:1300px;
         margin:0 auto;
+        font-family:'Dancing Script';
         h2{
             text-align:right;
             color:$colorB;
