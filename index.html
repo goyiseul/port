@@ -6,6 +6,7 @@
     <title>GOYISEUL PORTFOLIO</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Dancing+Script&family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9649766bc4.js" crossorigin="anonymous"></script>
     <link href="css/main.css" rel="stylesheet">
     <!-- <script src="//code.jquery.com/jquery-latest.min.js"></script> -->
 </head>
@@ -114,15 +115,18 @@
                     <img src="images/harang.png" alt="하랑디자인">
                 </div>
                 <div class="port_content">
-                    <p><span>사이트명</span> harang desig ></p>
+                    <p><span>사이트명</span> harang design</p>
                     <p><span>제작기간</span> 2020.04.10~05.08 </p>
                     <p><span class="port_production">제작물</span> 사이트 제작, 반응형 (pc, mobile) </p>
                     <p><span class="port_concept">컨셉</span> 고급스러움, 포근함, 따뜻함. </p>
                     <p><span class="port_color">컬러</span> <span id="harang_color1">#666699</span><span id="harang_color2"> #8383C7</span><span id="harang_color3">#999</span></p>
-                    <p><span class="port_info">소개</span>포근한 느낌을 위해 배경을 벽돌 느낌을 주고, footer는 바닥으로 깔아서 
-                        방안에 있는 듯한 느낌을 연출해보았다.
-                        로고도 하랑 뜻인 ‘하늘 처럼 높아져라’ 라는 점을 참고하여 하늘을 연상시키는
-                        구름 모양을 표현해보았다. </p>
+                    <p><span class="port_info">소개</span>
+                        <span class="port_info_text">
+                            포근한 느낌을 위해 background는 벽돌모양, footer는 바닥모양으로 하여 
+                            방안에 있는 듯한 느낌을 연출해보았다.
+                            로고도 하랑 뜻인 ‘하늘 처럼 높아져라’ 라는 점을 참고하여 하늘을 연상시키는
+                            구름 모양을 표현해보았다.
+                    </span> </p>
                 </div>
                 <div class="button">
                     <a href="seul.dothome.co.kr/harang"><span>사이트바로가기</span></a>
@@ -138,9 +142,9 @@
                     <p><span class="port_production">제작물</span>클론코딩, 반응형 (pc, mobile)</p>
                     <p><span class="port_concept">컨셉</span>트렌디함, 심플함.</p>
                     <p><span class="port_color">컬러</span> <span id="insta_color1">#fafafa</span><span id="insta_color2">#dbdbdb</span><span id="insta_color3">#0095f6</span></p>
-                    <p><span class="port_info">소개</span>요즘 인기 많은 SNS를 구현해보고 싶었다. 간단한듯 심플하지만 조합이 좋고, 기억에 남는 디자인이 좋았다.</p>
+                    <p><span class="port_info">소개</span><span class="port_info_text">요즘 인기 많은 SNS를 구현해보고 싶었다. 간단한듯 심플하지만 조합이 좋고, 기억에 남는 디자인이 좋았다.</span></p>
                 </div>
-                <div class="button">
+                <div class="button" id="insta_btn">
                     <a href="https://www.instagram.com/"><span>기존사이트</span></a>
                     <a href="seul.dothome.co.kr/instagram"><span>클론코딩사이트</span></a>
                 </div>
@@ -155,28 +159,37 @@
                     <p><span class="port_production">제작물</span>리디지인, 반응형 (pc, mobile)</p>
                     <p><span class="port_concept">컨셉</span>깨끗함, 신뢰감</p>
                     <p><span class="port_color">컬러</span> <span id="yuhanrox_color1">#3eaaf5</span><span id="yuhanrox_color2">#fff</span><span id="yuhanrox_color3">#555</span></p>
-                    <p><span class="port_info">소개</span>
-                        <span>선정 이유</span> : 메뉴부분, 슬라이드 버튼이 흰색이라 눈에 띄지 않아 답답했다.
-                         <span>문제점</span>
-                         <ul>
-                            <li>메뉴부분이 스크롤을 내려야만 보임.</li>
-                            <li>제품마다 정렬이 맞지 않음.</li>
-                            <li>동적인 느낌이 부족함.</li>
-                            <li>사이트 완성도가 낮음.</li>
-                            <li>카피라이트가 고정 되어있는 부분이 불편함.</li>
-                         </ul>
-                         <span>보완할 부분</span>
-                         <ul>
-                             <li>헤더부분을 색으로 분리하여 눈에 잘 띄게 할 것.</li>
-                             <li>레이아웃마다 정렬을 맞출 것.</li>
-                             <li>슬라이더를 화면 가득 채울 것.</li>
-                             <li>카피라이트는 화면 하단에 배치 할 것.</li>
-                             <li>메뉴는 마우스 오버시 전체 슬라이드 다운되도록 할 것.</li>
-                             <li>동적인 느낌을 추가 할 것.</li>
-                         </ul>
-                    </p>
+                    <span class="port_info">소개</span>
+                    <div id="port_info_wrap">
+                        <ul>
+                            <li>
+                                &diams; 선정 이유 : 메뉴부분, 슬라이드 버튼이 흰색이라 눈에 띄지 않아 답답했다.
+                            </li>
+                            <li>
+                                &diams; 문제점
+                                <ul class="port_info_list">
+                                    <li>메뉴부분이 스크롤을 내려야만 보임.</li>
+                                    <li>제품마다 정렬이 맞지 않음.</li>
+                                    <li>동적인 느낌이 부족함.</li>
+                                    <li>사이트 완성도가 낮음.</li>
+                                    <li>카피라이트가 고정 되어있는 부분이 불편함.</li>
+                                 </ul>
+                            </li>
+                             <li>
+                                &diams; 보완할 부분
+                                 <ul class="port_info_list">
+                                    <li>헤더부분을 색으로 분리하여 눈에 잘 띄게 할 것.</li>
+                                    <li>레이아웃마다 정렬을 맞출 것.</li>
+                                    <li>슬라이더를 화면 가득 채울 것.</li>
+                                    <li>카피라이트는 화면 하단에 배치 할 것.</li>
+                                    <li>메뉴는 마우스 오버시 전체 슬라이드 다운되도록 할 것.</li>
+                                    <li>동적인 느낌을 추가 할 것.</li>
+                                </ul>
+                             </li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="button">
+                <div class="button" id="yuhanrox_btn">
                     <a href="https://yuhanrox.co.kr/"><span>기존사이트</span></a>
                     <a href="seul.dothome.co.kr/yuhanrox"><span>리디자인사이트</span></a>
                 </div>
@@ -185,36 +198,27 @@
     </section><!--portfolio end-->
     <section id="contact">
         <h1 class="notext">연락처, 메일, sns 기재</h1>
-        <div class="contact_contents_wrap">
-            <div class="contact_title">
-                <h2>contact</h2>
-            </div>
-            <div class="contact_bg">bg</div>
+        <div class="contact_title">
+            <h2>contact</h2>
+        </div>
+        <div class="contact_bg">
             <div class="contact_info_wrap">
+                <div id="contact_info_bg"></div>
                 <ul id="contact_info">
                     <li>
-                        <figure>
-                            <img src="images/icon1.svg" alt="">
-                            <figcaption>010-2351-3625</figcaption>
-                        </figure>
+                        <i class="fas fa-mobile-alt"></i>010-2351-3625    
                     </li>
                     <li>
-                        <figure>
-                            <img src="images/icon1.svg" alt="">
-                            <figcaption>rhdltmf2543@gmail.com</figcaption>
-                        </figure>
+                        <i class="fas fa-paper-plane"></i>rhdltmf2543@gmail.com
                     </li>
                     <li>
-                        <figure>
-                            <img src="images/icon1.svg" alt="">
-                            <figcaption>go.2seul</figcaption>
-                        </figure>
+                        <i class="fab fa-instagram"></i>go.2seul
                     </li>
                 </ul>
             </div>
-            <div class="contact_bottom_text">
-                <h2>thank you.</h2>
-            </div>
+        </div>
+        <div class="contact_bottom_text">
+            <h2>thank you.</h2>
         </div>
     </section><!--contact end-->
     <script src="script/main.js"></script>

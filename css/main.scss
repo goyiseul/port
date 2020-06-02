@@ -58,6 +58,15 @@ $fontS : #5A5A5A;
         }
     }
 }
+@mixin colordot{
+    width:19px;
+    height:19px;
+    border-radius:50%;
+    display:inline-block;
+    // font-size:0;
+    text-indent:-9999px;
+    margin:5px 5px 0 0;
+}
 body{
     font:15px/1.5 'Noto Sans KR','Dancing Script', 'Abril Fatface', sans-serif;
     background:$colorW;
@@ -82,7 +91,7 @@ a, a:link{
     #main_nav_wrap{
         position:absolute;
         right:0;
-        top:120px;
+        top:100px;
         #main_nav{
             // font-family:'Dancing Script';
             color:$colorB;
@@ -129,7 +138,7 @@ a, a:link{
 // #home
 #home{
     width:100%;
-    height:100vh;
+    height:1080px;
     // padding:500px 0;
     box-sizing: border-box;
     position:relative;
@@ -153,11 +162,10 @@ a, a:link{
             width:100%;
             height:100%;
             font-size:0;
-            background:url("../images/home_bg.jpg") no-repeat;
+            background:url("../images/home_bg2.jpg") no-repeat;
             background-attachment: fixed;
-            background-position:top;
-            background-size:100%;
-            // background-position-y: 200%;
+            background-position:center 33%;
+            background-size:cover;
         }
         .home_text{
             width:1300px;
@@ -194,7 +202,7 @@ a, a:link{
 // about
 #about{
     width:100%;
-    height:100vh;
+    height:1080px;
     .about_title_wrap{
         @include title_bg;
         #about_photo{
@@ -323,7 +331,7 @@ a, a:link{
         margin:0 auto;
         >div{
             width:100%;
-            height:1000px;
+            margin-bottom:100px;
             .port_img{
                 img{
                     width:1200px;
@@ -337,10 +345,12 @@ a, a:link{
                     color:$fontS;
                     margin-bottom:5px;
                     span{
+                        width:90px;
+                        display:inline-block;
                         font-weight:bold;
                         color:$font;
-                        margin-right:20px;
                     }
+                    @include clear;
                 }
                 .port_production{
                     letter-spacing: 8px;
@@ -348,9 +358,78 @@ a, a:link{
                 .port_concept, .port_color, .port_info{
                     letter-spacing: 30px;
                 }
+                .port_info{
+                    float:left;
+                }
+                .port_info_text{
+                    width:500px;
+                    float:left;
+                    font-weight:100;
+                    color:$fontS;
+                }
+                #harang_color1{
+                    @include colordot;
+                    background:#666699;
+                }
+                #harang_color2{
+                    @include colordot;
+                    background:#8383C7;
+                }
+                #harang_color3{
+                    @include colordot;
+                    background:#999;
+                }
+                #insta_color1{
+                    @include colordot;
+                    background:#fafafa;
+                    box-sizing:border-box;
+                    border:1px solid $font;
+                }
+                #insta_color2{
+                    @include colordot;
+                    background:#dbdbdb;
+                }
+                #insta_color3{
+                    @include colordot;
+                    background:#0095f6;
+                }
+                #yuhanrox_color1{
+                    @include colordot;
+                    background:#3eaaf5;
+                }
+                #yuhanrox_color2{
+                    @include colordot;
+                    background:#fff;
+                    box-sizing:border-box;
+                    border:1px solid $font;
+                }
+                #yuhanrox_color3{
+                    @include colordot;
+                    background:#555;
+                }
+                #port_info_wrap{
+                    >ul{
+                        color:$fontS;
+                        margin-left:90px;
+                        >li{
+                            margin-bottom:10px;
+                        }
+                    }
+                    .port_info_list{
+                        margin-left:10px;
+                        li{
+                            &:before{
+                                content:'-';
+                                display:inline-block;
+
+                            }
+                        }
+                    }
+                }
             }
             .button{
                 text-align:center;
+                margin-top:30px;
                 a{
                     margin:0 auto;
                     display:block;
@@ -360,8 +439,92 @@ a, a:link{
                     border:1px solid $colorG;
                     border-radius:30px;
                     line-height:30px;
+                    transition:all 0.3s;
+                    &:hover{
+                        background:$colorY;
+                    }
+                }
+            }
+            #insta_btn, #yuhanrox_btn{
+                @include  clear;
+                a{
+                    display:inline-block;
+                    &:nth-child(1){
+                        margin-right:10px;
+                    }
                 }
             }
         }
+    }
+}
+// contact
+#contact{
+    width:100%;
+    margin:300px 0;
+    .contact_title{
+        width:1300px;
+        margin:0 auto;
+        height:127px;
+        h2{
+            color:$colorA;
+            font-size:110px;
+        }
+    }
+    .contact_bg{
+        width:100%;
+        height:350px;
+        background:url("../images/contact_bg.jpg") no-repeat;
+        background-attachment: fixed;
+        background-position:center 94%;
+        background-size:100%;
+        .contact_info_wrap{
+            position:relative;
+            padding:60px 0 0 0;
+            #contact_info_bg{
+                width:850px;
+                height:220px;
+                background:rgba(0,0,0,.5);
+                transform:rotate(-15deg);
+                margin:0 auto;
+            }
+            #contact_info{
+                position:absolute;
+                top:50%;
+                left:50%;
+                transform:translate(-50%,-50%);
+                color:$colorW;
+                font-size:20px;
+                padding-top:60px;
+                li{
+                    margin:0px 0 5px 0;
+                    i{
+                        margin-right:10px;
+                        width:30px;
+                        text-align:center;
+                    }
+                }
+            }
+        }
+    }
+    .contact_bottom_text{
+        width:1300px;
+        margin:0 auto;
+        h2{
+            text-align:right;
+            color:$colorB;
+            font-size:40px;
+        }
+    }
+}
+// mobile
+@media screen and (max-width:420px){
+    .home_bg{
+        width:100%;
+            height:100%;
+            font-size:0;
+            background:url("../images/home_bg.jpg") no-repeat;
+            background-attachment: fixed;
+            background-position:top center;
+            background-size:100%;
     }
 }

@@ -26,7 +26,7 @@ a, a:link {
 #go2seul_header #main_nav_wrap {
   position: absolute;
   right: 0;
-  top: 120px;
+  top: 100px;
 }
 
 #go2seul_header #main_nav_wrap #main_nav {
@@ -78,7 +78,7 @@ a, a:link {
 
 #home {
   width: 100%;
-  height: 100vh;
+  height: 1080px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   position: relative;
@@ -108,10 +108,10 @@ a, a:link {
   width: 100%;
   height: 100%;
   font-size: 0;
-  background: url("../images/home_bg.jpg") no-repeat;
+  background: url("../images/home_bg2.jpg") no-repeat;
   background-attachment: fixed;
-  background-position: top;
-  background-size: 100%;
+  background-position: center 33%;
+  background-size: cover;
 }
 
 #home .home_bg_wrap .home_text {
@@ -152,7 +152,7 @@ a, a:link {
 
 #about {
   width: 100%;
-  height: 100vh;
+  height: 1080px;
 }
 
 #about .about_title_wrap {
@@ -456,7 +456,7 @@ a, a:link {
 
 #portfolio .port_contents_wrap > div {
   width: 100%;
-  height: 1000px;
+  margin-bottom: 100px;
 }
 
 #portfolio .port_contents_wrap > div .port_img img {
@@ -475,9 +475,16 @@ a, a:link {
 }
 
 #portfolio .port_contents_wrap > div .port_content p span {
+  width: 90px;
+  display: inline-block;
   font-weight: bold;
   color: #333;
-  margin-right: 20px;
+}
+
+#portfolio .port_contents_wrap > div .port_content p:after {
+  content: '';
+  display: block;
+  clear: both;
 }
 
 #portfolio .port_contents_wrap > div .port_content .port_production {
@@ -488,8 +495,134 @@ a, a:link {
   letter-spacing: 30px;
 }
 
+#portfolio .port_contents_wrap > div .port_content .port_info {
+  float: left;
+}
+
+#portfolio .port_contents_wrap > div .port_content .port_info_text {
+  width: 500px;
+  float: left;
+  font-weight: 100;
+  color: #5A5A5A;
+}
+
+#portfolio .port_contents_wrap > div .port_content #harang_color1 {
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  display: inline-block;
+  text-indent: -9999px;
+  margin: 5px 5px 0 0;
+  background: #666699;
+}
+
+#portfolio .port_contents_wrap > div .port_content #harang_color2 {
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  display: inline-block;
+  text-indent: -9999px;
+  margin: 5px 5px 0 0;
+  background: #8383C7;
+}
+
+#portfolio .port_contents_wrap > div .port_content #harang_color3 {
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  display: inline-block;
+  text-indent: -9999px;
+  margin: 5px 5px 0 0;
+  background: #999;
+}
+
+#portfolio .port_contents_wrap > div .port_content #insta_color1 {
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  display: inline-block;
+  text-indent: -9999px;
+  margin: 5px 5px 0 0;
+  background: #fafafa;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid #333;
+}
+
+#portfolio .port_contents_wrap > div .port_content #insta_color2 {
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  display: inline-block;
+  text-indent: -9999px;
+  margin: 5px 5px 0 0;
+  background: #dbdbdb;
+}
+
+#portfolio .port_contents_wrap > div .port_content #insta_color3 {
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  display: inline-block;
+  text-indent: -9999px;
+  margin: 5px 5px 0 0;
+  background: #0095f6;
+}
+
+#portfolio .port_contents_wrap > div .port_content #yuhanrox_color1 {
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  display: inline-block;
+  text-indent: -9999px;
+  margin: 5px 5px 0 0;
+  background: #3eaaf5;
+}
+
+#portfolio .port_contents_wrap > div .port_content #yuhanrox_color2 {
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  display: inline-block;
+  text-indent: -9999px;
+  margin: 5px 5px 0 0;
+  background: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid #333;
+}
+
+#portfolio .port_contents_wrap > div .port_content #yuhanrox_color3 {
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  display: inline-block;
+  text-indent: -9999px;
+  margin: 5px 5px 0 0;
+  background: #555;
+}
+
+#portfolio .port_contents_wrap > div .port_content #port_info_wrap > ul {
+  color: #5A5A5A;
+  margin-left: 90px;
+}
+
+#portfolio .port_contents_wrap > div .port_content #port_info_wrap > ul > li {
+  margin-bottom: 10px;
+}
+
+#portfolio .port_contents_wrap > div .port_content #port_info_wrap .port_info_list {
+  margin-left: 10px;
+}
+
+#portfolio .port_contents_wrap > div .port_content #port_info_wrap .port_info_list li:before {
+  content: '-';
+  display: inline-block;
+}
+
 #portfolio .port_contents_wrap > div .button {
   text-align: center;
+  margin-top: 30px;
 }
 
 #portfolio .port_contents_wrap > div .button a {
@@ -501,5 +634,108 @@ a, a:link {
   border: 1px solid #4C6235;
   border-radius: 30px;
   line-height: 30px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+#portfolio .port_contents_wrap > div .button a:hover {
+  background: #F7E880;
+}
+
+#portfolio .port_contents_wrap > div #insta_btn:after, #portfolio .port_contents_wrap > div #yuhanrox_btn:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+#portfolio .port_contents_wrap > div #insta_btn a, #portfolio .port_contents_wrap > div #yuhanrox_btn a {
+  display: inline-block;
+}
+
+#portfolio .port_contents_wrap > div #insta_btn a:nth-child(1), #portfolio .port_contents_wrap > div #yuhanrox_btn a:nth-child(1) {
+  margin-right: 10px;
+}
+
+#contact {
+  width: 100%;
+  margin: 300px 0;
+}
+
+#contact .contact_title {
+  width: 1300px;
+  margin: 0 auto;
+  height: 127px;
+}
+
+#contact .contact_title h2 {
+  color: #A1BBB2;
+  font-size: 110px;
+}
+
+#contact .contact_bg {
+  width: 100%;
+  height: 350px;
+  background: url("../images/contact_bg.jpg") no-repeat;
+  background-attachment: fixed;
+  background-position: center 94%;
+  background-size: 100%;
+}
+
+#contact .contact_bg .contact_info_wrap {
+  position: relative;
+  padding: 60px 0 0 0;
+}
+
+#contact .contact_bg .contact_info_wrap #contact_info_bg {
+  width: 850px;
+  height: 220px;
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-transform: rotate(-15deg);
+          transform: rotate(-15deg);
+  margin: 0 auto;
+}
+
+#contact .contact_bg .contact_info_wrap #contact_info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 20px;
+  padding-top: 60px;
+}
+
+#contact .contact_bg .contact_info_wrap #contact_info li {
+  margin: 0px 0 5px 0;
+}
+
+#contact .contact_bg .contact_info_wrap #contact_info li i {
+  margin-right: 10px;
+  width: 30px;
+  text-align: center;
+}
+
+#contact .contact_bottom_text {
+  width: 1300px;
+  margin: 0 auto;
+}
+
+#contact .contact_bottom_text h2 {
+  text-align: right;
+  color: #A49381;
+  font-size: 40px;
+}
+
+@media screen and (max-width: 420px) {
+  .home_bg {
+    width: 100%;
+    height: 100%;
+    font-size: 0;
+    background: url("../images/home_bg.jpg") no-repeat;
+    background-attachment: fixed;
+    background-position: top center;
+    background-size: 100%;
+  }
 }
 /*# sourceMappingURL=main.css.map */
