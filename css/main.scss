@@ -735,12 +735,12 @@ a, a:link{
             h2{
                 font-size:90px;
                 text-align:center;
+                color:#0b3155;
             }
         }
         .contact_bg{
-            background-position-y:150%;
-            background-size:220%;
-            // background:url("../images/contact_bg_m.jpg");
+            background-position-y:bottom;
+            background-size:190%;
             .contact_info_wrap{
                 #contact_info_bg{
                     width:70%;

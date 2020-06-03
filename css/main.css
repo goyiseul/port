@@ -985,10 +985,11 @@ a, a:link {
   #contact .contact_title h2 {
     font-size: 90px;
     text-align: center;
+    color: #0b3155;
   }
   #contact .contact_bg {
-    background-position-y: 150%;
-    background-size: 220%;
+    background-position-y: bottom;
+    background-size: 190%;
   }
   #contact .contact_bg .contact_info_wrap #contact_info_bg {
     width: 70%;
