@@ -31,6 +31,16 @@ $fontS : #5A5A5A;
             background:$colorG;
         }
 }
+@mixin m_title_bg{
+    margin-bottom:50px;
+            .title_text{
+                width:100%;
+                text-align:center;
+            }
+            .title_text_bg{
+                height:10px;
+            }
+}
 @mixin about_title{
     h2{
         width:80px;
@@ -71,7 +81,7 @@ body{
     font:15px/1.5 'Noto Sans KR','Dancing Script', 'Abril Fatface', sans-serif;
     background:$colorW;
     color:$font;
-    width:1920px;
+    width:100%;
 }
 .notext{
     display:none;
@@ -82,20 +92,15 @@ a, a:link{
 }
 // header
 #go2seul_header{
-    // width:1300px;
-    // height:300px;
-    // position:fixed;
-    // left:50%;
-    // transform:translateX(-50%);
-    // z-index:999;
     #main_nav_wrap{
         position:fixed;
-        right:-275px;
+        right:-285px;
         top:0;
         background:$colorY;
         width:300px;
         height:100%;
         z-index:999;
+        transition:all 0.4s;
         #nav_img{
             width:150px;
             margin:50px auto;
@@ -120,7 +125,7 @@ a, a:link{
                 border-radius:10px;
                 position:absolute;
                 left:10px;
-                transition:all 0.3s;
+                transition:all 0.4s;
             }
             #bar1{
                 transform:rotate(-40deg);
@@ -215,11 +220,9 @@ a, a:link{
         }
     }
 }
-// .active{
-//     border-left:1px solid $colorG;
-//     border-right:1px solid $colorG;
-//     border-radius: 5px;
-// }
+.active{
+    right:0 !important;
+}
 // #home
 #home{
     width:100%;
@@ -610,14 +613,150 @@ a, a:link{
     }
 }
 // mobile
-@media screen and (max-width:420px){
-    .home_bg{
+@media screen and (max-width:640px){
+    html, body{
         width:100%;
-            height:100%;
-            font-size:0;
-            background:url("../images/home_bg.jpg") no-repeat;
-            background-attachment: fixed;
-            background-position:top center;
-            background-size:100%;
+    }
+    #home, #about, #portfolio, #contact{
+        width:100%;
+        overflow:hidden;
+    }
+    #home{
+        height:100vh;
+        &:before{
+            bottom:18.5%;
+            width:41%;
+            height:1px;
+        }
+        .home_bg_wrap{
+            .home_bg{
+                background-position-y:142px;
+            }
+            .home_text{
+                width:100%;
+                font-size:60px;
+                top:-68px;
+                h2{
+                    margin-left:20px;
+                }
+            }
+        }
+        .home_bottom_text{
+            width:100%;
+            bottom:17%;
+            p{
+                font-size:20px;
+                margin-right:20px;
+            }
+        }
+    }
+    #about{
+        height:auto;
+        .about_title_wrap{
+            @include m_title_bg;
+            #about_photo{
+                position:static;
+                width:300px;
+                height:300px;
+                margin:50px auto 0;
+                transform:none;
+                img{
+                    width:70%;
+                    padding:0 15%;
+                    height:70%;
+                }
+            }
+        }
+        .about_box{
+            width:100%;
+            height:auto;
+            box-sizing:border-box;
+            padding:0 20px;
+            .about_box_left{
+                width:100%;
+                float:none;
+                >div{
+                    margin-bottom:40px;
+                }
+                #about_education{
+                    padding:0;
+                }
+            }
+            .about_box_right{
+                width:100%;
+                float:none;
+                #about_skill{
+                    h2{
+                        margin-bottom:5px;
+                    }
+                }
+            }
+        }
+    }
+    #portfolio{
+        // display:none;
+        .port_title_wrap{
+            @include m_title_bg;
+        }
+        .port_contents_wrap{
+            width:100%;
+            div{
+                .port_img{
+                    width:100%;
+                    img{
+                        width:90%;
+                        margin:0 5%;
+                    }
+                    p{
+                        font-size:30px;
+                    }
+                }
+                .port_content{
+                    width:100%;
+                    padding:0 20px;
+                    box-sizing:border-box;
+                    .port_info_text{
+                        width:300px;
+                    }
+                }
+                .button{
+                    a{
+                        width:180px;
+                    }
+                }
+            }
+        }
+    }
+    #contact{
+        margin:100px 0;
+        .contact_title{
+            width:100%;
+            height:81px;
+            h2{
+                font-size:90px;
+                text-align:center;
+            }
+        }
+        .contact_bg{
+            background-position-y:150%;
+            background-size:220%;
+            // background:url("../images/contact_bg_m.jpg");
+            .contact_info_wrap{
+                #contact_info_bg{
+                    width:70%;
+                }
+                #contact_info{
+                    font-size:1rem;
+                    width:55%;
+                }
+            }
+        }
+        .contact_bottom_text{
+            width:100%;
+            h2{
+                margin-right:20px;
+                font-size:30px;
+            }
+        }
     }
 }
