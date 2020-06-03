@@ -864,7 +864,7 @@ a, a:link {
     overflow: hidden;
   }
   #home {
-    height: 100vh;
+    height: 640px;
   }
   #home:before {
     bottom: 18.5%;
