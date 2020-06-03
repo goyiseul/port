@@ -866,7 +866,10 @@ a, a:link {
   }
   #go2seul_header #main_nav_wrap {
     width: 200px;
-    right: -185px;
+    right: -190px;
+  }
+  #go2seul_header #main_nav_wrap #main_nav li a {
+    padding: 0 10px;
   }
   #home {
     height: 640px;
