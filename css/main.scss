@@ -613,7 +613,7 @@ a, a:link{
     }
 }
 // mobile
-@media screen and (max-width:640px){
+@media screen and (max-width:500px){
     html, body{
         width:100%;
     }
@@ -757,6 +757,111 @@ a, a:link{
                 margin-right:20px;
                 font-size:30px;
             }
+        }
+    }
+}
+//1024px
+@media screen and (max-width:1024px){
+    #home{
+        height:800px;
+        &:before{
+            bottom:24%;
+            width:63%;
+        }
+        .home_bg_wrap{
+            .home_bg{
+                background-position-y:144px;
+            }
+        }
+        .home_bottom_text{
+            bottom:22%;
+        }
+    }
+    #contact{
+        margin:150px 0;
+    }
+}
+// 1200px
+@media screen and (max-width:1200px){
+    #home{
+        height:900px;
+        &:before{
+            bottom:27.5%;
+        }
+        .home_bg_wrap{
+            .home_bg{
+                background-position-y:165px;
+            }
+            .home_text{
+                width:100%;
+                padding-left:50px;
+                box-sizing:border-box;
+            }
+        }
+        .home_bottom_text{
+            width:100%;
+            padding-right:50px;
+            bottom:25.5%;
+            box-sizing:border-box;
+        }
+    }
+    #about{
+        .about_title_wrap{
+            .title_text{
+                width:100%;
+                padding-left:50px;
+                box-sizing:border-box;
+            }
+        }
+    }
+    #portfolio{
+        .port_title_wrap{
+            .title_text{
+                width:100%;
+                padding-left:50px;
+                box-sizing:border-box;
+            }
+        }
+        .port_contents_wrap{
+            width:100%;
+        }
+    }
+    #contact{
+        margin:200px 0;
+        .contact_title{
+            width:100%;
+            padding-left:50px;
+            box-sizing:border-box;
+        }
+        .contact_bottom_text{
+            width:100%;
+            padding-right:50px;
+            box-sizing:border-box;
+        }
+    }
+}
+// 1440px
+@media screen and (max-width:1440px){
+    #home{
+        height:900px;
+        &:before{
+            bottom:27.5%;
+            width:71%;
+            height:1px;
+        }
+        .home_bg_wrap{
+            .home_bg{
+                background-position-y:80px;
+            }
+        }
+        .home_bottom_text{
+            bottom:25.5%;
+        }
+    }
+    #contact{
+        margin:180px 0;
+        .contact_bg{
+            background-position: center 105%;
         }
     }
 }

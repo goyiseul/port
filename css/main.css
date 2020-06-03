@@ -855,7 +855,7 @@ a, a:link {
   font-size: 40px;
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 500px) {
   html, body {
     width: 100%;
   }
@@ -1003,6 +1003,103 @@ a, a:link {
   #contact .contact_bottom_text h2 {
     margin-right: 20px;
     font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #home {
+    height: 800px;
+  }
+  #home:before {
+    bottom: 24%;
+    width: 63%;
+  }
+  #home .home_bg_wrap .home_bg {
+    background-position-y: 144px;
+  }
+  #home .home_bottom_text {
+    bottom: 22%;
+  }
+  #contact {
+    margin: 150px 0;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #home {
+    height: 900px;
+  }
+  #home:before {
+    bottom: 27.5%;
+  }
+  #home .home_bg_wrap .home_bg {
+    background-position-y: 165px;
+  }
+  #home .home_bg_wrap .home_text {
+    width: 100%;
+    padding-left: 50px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  #home .home_bottom_text {
+    width: 100%;
+    padding-right: 50px;
+    bottom: 25.5%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  #about .about_title_wrap .title_text {
+    width: 100%;
+    padding-left: 50px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  #portfolio .port_title_wrap .title_text {
+    width: 100%;
+    padding-left: 50px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  #portfolio .port_contents_wrap {
+    width: 100%;
+  }
+  #contact {
+    margin: 200px 0;
+  }
+  #contact .contact_title {
+    width: 100%;
+    padding-left: 50px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  #contact .contact_bottom_text {
+    width: 100%;
+    padding-right: 50px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  #home {
+    height: 900px;
+  }
+  #home:before {
+    bottom: 27.5%;
+    width: 71%;
+    height: 1px;
+  }
+  #home .home_bg_wrap .home_bg {
+    background-position-y: 80px;
+  }
+  #home .home_bottom_text {
+    bottom: 25.5%;
+  }
+  #contact {
+    margin: 180px 0;
+  }
+  #contact .contact_bg {
+    background-position: center 105%;
   }
 }
 /*# sourceMappingURL=main.css.map */
