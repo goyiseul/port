@@ -761,7 +761,7 @@ a, a:link{
     }
 }
 //1024px
-@media screen and (max-width:1024px){
+@media screen and (min-width:500px) and (max-width:1024px){
     #home{
         height:800px;
         &:before{
@@ -782,7 +782,7 @@ a, a:link{
     }
 }
 // 1200px
-@media screen and (max-width:1200px){
+@media screen and (min-width:500px) and (max-width:1200px){
     #home{
         height:900px;
         &:before{
@@ -841,7 +841,7 @@ a, a:link{
     }
 }
 // 1440px
-@media screen and (max-width:1440px){
+@media screen and (min-width:1200px) and (max-width:1440px){
     #home{
         height:900px;
         &:before{
