@@ -864,6 +864,10 @@ a, a:link {
     width: 100%;
     overflow: hidden;
   }
+  #go2seul_header #main_nav_wrap {
+    width: 200px;
+    right: -185px;
+  }
   #home {
     height: 640px;
   }
