@@ -623,6 +623,7 @@ a, a:link {
 
 #portfolio .port_contents_wrap > div .port_content .port_info {
   float: left;
+  font-weight: 900;
 }
 
 #portfolio .port_contents_wrap > div .port_content .port_info_text {
