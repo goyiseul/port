@@ -176,19 +176,6 @@ a, a:link {
   opacity: 0;
 }
 
-#go2seul_header #main_nav_wrap #main_nav > li > a span {
-  position: relative;
-  z-index: 90;
-}
-
-#go2seul_header #main_nav_wrap #main_nav > li .nav_ond {
-  background: #F7E880;
-  width: 100%;
-  height: 10px;
-  display: block;
-  margin: 17px 0;
-}
-
 .active {
   right: 0 !important;
 }
@@ -198,6 +185,7 @@ a, a:link {
   height: 100%;
   position: fixed;
   z-index: 990;
+  display: none;
 }
 
 #home {
@@ -790,6 +778,76 @@ a, a:link {
   margin-right: 10px;
 }
 
+#design {
+  width: 100%;
+}
+
+#design .design_title_wrap {
+  position: relative;
+  margin-bottom: 200px;
+}
+
+#design .design_title_wrap .title_text {
+  width: 1300px;
+  margin: 0 auto;
+  color: #4C6235;
+  font-size: 60px;
+  text-transform: capitalize;
+  height: 68px;
+  font-weight: 800;
+}
+
+#design .design_title_wrap .title_text_bg {
+  width: 100%;
+  height: 50px;
+  background: #4C6235;
+}
+
+#design .design_list {
+  width: 1300px;
+  margin: 0 auto;
+}
+
+#design .design_list:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+#design .design_list > div {
+  width: 252px;
+  height: 252px;
+  float: left;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 3px solid #4C6235;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+#design .design_list > div:nth-of-type(5n) {
+  margin-right: 0;
+}
+
+#design .design_list > div > div {
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+#design .design_list > div > div:hover {
+  -webkit-filter: none;
+          filter: none;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+#design .design_list > div > div img {
+  width: 100%;
+}
+
 #contact {
   width: 100%;
   margin: 300px 0;
@@ -861,6 +919,53 @@ a, a:link {
   text-align: right;
   color: #A49381;
   font-size: 40px;
+}
+
+#design_visual {
+  width: 100%;
+  position: relative;
+}
+
+#design_visual .design_visual_img {
+  width: 100%;
+}
+
+#design_visual .design_visual_img img {
+  width: 100%;
+}
+
+#design_visual .design_visual_text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#design_visual .design_visual_text h2 {
+  font: 150px 'Abril Fatface';
+  color: #fff;
+  letter-spacing: 3px;
+}
+
+#design_contents {
+  width: 1300px;
+  margin: 150px auto;
+}
+
+#design_contents div {
+  text-align: center;
+}
+
+#design_contents .img_size img {
+  width: 100%;
+}
+
+#line {
+  width: 100%;
+  border-top: 1px solid #ccc;
+  font-size: 0;
+  margin: 10px 0;
 }
 
 @media screen and (max-width: 500px) {
@@ -990,6 +1095,16 @@ a, a:link {
   #portfolio .port_contents_wrap div .button a {
     width: 180px;
   }
+  #design .design_list {
+    width: 360px;
+  }
+  #design .design_list > div {
+    width: 80px;
+    height: 80px;
+  }
+  #design .design_list > div:nth-of-type(5n) {
+    margin-right: 10px;
+  }
   #contact {
     margin: 100px 0;
   }
@@ -1020,6 +1135,17 @@ a, a:link {
     margin-right: 20px;
     font-size: 30px;
   }
+  #design_visual .design_visual_text h2 {
+    font-size: 50px;
+    letter-spacing: 3px;
+  }
+  #design_contents {
+    width: 100%;
+    margin: 20px auto;
+  }
+  #design_contents div img {
+    width: 100%;
+  }
 }
 
 @media screen and (min-width: 500px) and (max-width: 1024px) {
@@ -1038,6 +1164,23 @@ a, a:link {
   }
   #contact {
     margin: 150px 0;
+  }
+  #design_contents {
+    width: 1000px;
+    margin: 100px auto;
+  }
+  #design .design_title_wrap {
+    margin-bottom: 100px;
+  }
+  #design .design_list {
+    width: 1000px;
+  }
+  #design .design_list > div {
+    width: 240px;
+    height: 240px;
+  }
+  #design .design_list > div:nth-of-type(5n) {
+    margin-right: 10px;
   }
 }
 
@@ -1093,6 +1236,23 @@ a, a:link {
     padding-right: 50px;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
+  }
+  #design_contents {
+    width: 1100px;
+    margin: 100px auto;
+  }
+  #design .design_list {
+    width: 1000px;
+  }
+  #design .design_list > div {
+    width: 240px;
+    height: 240px;
+  }
+  #design .design_list > div:nth-of-type(5n) {
+    margin-right: 10px;
+  }
+  #design_visual .design_visual_text h2 {
+    font-size: 80px;
   }
 }
 

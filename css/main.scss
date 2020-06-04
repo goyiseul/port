@@ -204,20 +204,25 @@ a, a:link{
                         right:0;
                         opacity: 0;
                     }
-                    span{
-                        position:relative;
-                        z-index:90;
-                    }
-                }
-                .nav_ond{
-                    background:$colorY;
-                    width:100%;
-                    height:10px;
-                    display:block;
-                    margin:17px 0;
+                    // span{
+                    //     position:relative;
+                    //     z-index:90;
+                    // }
                 }
             }
         }
+        // #yiseul_info{
+        //     position:absolute;
+        //     bottom:20px;
+        //     ul{
+        //         li{
+        //             color:#ccc;
+        //             i{
+        //                 margin-right:10px;
+        //             }
+        //         }
+        //     }
+        // }
     }
 }
 .active{
@@ -228,6 +233,7 @@ a, a:link{
     height:100%;
     position:fixed;
     z-index:990;
+    display:none;
 }
 // #home
 #home{
@@ -558,6 +564,42 @@ a, a:link{
         }
     }
 }
+// design
+#design{
+    width:100%;
+    .design_title_wrap{
+        @include title_bg;
+    }
+    .design_list{
+        width:1300px;
+        margin:0 auto;
+        @include clear;
+        >div{
+            width:252px;
+            height:252px;
+            float:left;
+            box-sizing:border-box;
+            border:3px solid $colorG;
+            margin-right:10px;
+            margin-bottom:10px;
+            overflow:hidden;
+            &:nth-of-type(5n){
+                margin-right:0;
+            }
+            >div{
+                filter: grayscale(100%);
+                transition:all 0.3s;
+                &:hover{
+                    filter: none;
+                    transform:scale(1.1);
+                }
+                img{
+                    width:100%;
+                }
+            }
+        }
+    }
+}
 // contact
 #contact{
     width:100%;
@@ -618,6 +660,46 @@ a, a:link{
             font-size:40px;
         }
     }
+}
+// design sub page
+#design_visual{
+    width:100%;
+    position:relative;
+    .design_visual_img{
+        width:100%;
+        img{
+            width:100%;
+        }
+    }
+    .design_visual_text{
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform:translate(-50%,-50%);
+        h2{
+            font:150px 'Abril Fatface';
+            color:$colorW;
+            letter-spacing:3px;
+        }
+    }
+}
+#design_contents{
+    width:1300px;
+    margin:150px auto;
+    div{
+        text-align:center;
+    }
+    .img_size{
+        img{
+            width:100%;
+        }
+    }
+}
+#line{
+    width:100%;
+    border-top:1px solid #ccc;
+    font-size:0;
+    margin:10px 0;
 }
 // mobile
 @media screen and (max-width:500px){
@@ -747,6 +829,18 @@ a, a:link{
             }
         }
     }
+    #design{
+        .design_list{
+            width:360px;
+            >div{
+                width:80px;
+                height:80px;
+                &:nth-of-type(5n){
+                    margin-right:10px;
+                }
+            }
+        }
+    }
     #contact{
         margin:100px 0;
         .contact_title{
@@ -779,6 +873,23 @@ a, a:link{
             }
         }
     }
+    #design_visual{
+        .design_visual_text{
+            h2{
+                font-size:50px;
+                letter-spacing:3px;
+            }
+        }
+    }
+    #design_contents{
+        width:100%;
+        margin:20px auto;
+        div{
+            img{
+                width:100%;
+            }
+        }
+    }
 }
 //1024px
 @media screen and (min-width:500px) and (max-width:1024px){
@@ -799,6 +910,28 @@ a, a:link{
     }
     #contact{
         margin:150px 0;
+    }
+    #design_contents{
+        width:1000px;
+        margin:100px auto;
+        // img{
+        //     width:100%;
+        // }
+    }
+    #design{
+        .design_title_wrap{
+            margin-bottom:100px;
+        }
+        .design_list{
+            width:1000px;
+            >div{
+                width:240px;
+                height:240px;
+                &:nth-of-type(5n){
+                    margin-right:10px;
+                }
+            }
+        }
     }
 }
 // 1200px
@@ -857,6 +990,32 @@ a, a:link{
             width:100%;
             padding-right:50px;
             box-sizing:border-box;
+        }
+    }
+    #design_contents{
+        width:1100px;
+        margin:100px auto;
+        // img{
+        //     width:100%;
+        // }
+    }
+    #design{
+        .design_list{
+            width:1000px;
+            >div{
+                width:240px;
+                height:240px;
+                &:nth-of-type(5n){
+                    margin-right:10px;
+                }
+            }
+        }
+    }
+    #design_visual{
+        .design_visual_text{
+            h2{
+                font-size:80px;
+            }
         }
     }
 }

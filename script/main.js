@@ -6,7 +6,6 @@ $(function(){
 function nav(){
     $('#nav_btn').click(function(){
         if($(this).hasClass('on')){
-            $('#fadeIn').fadeOut();
             $(this).removeClass('on');
             $('#main_nav_wrap').removeClass('active');
             $('#bar1').removeClass('bar1_on');
@@ -22,6 +21,7 @@ function nav(){
 }
 function fadeNav(){
     $('#fade_nav').click(function(){
+        $(this).fadeOut();
         $('#nav_btn').removeClass('on');
         $('#main_nav_wrap').removeClass('active');
         $('#bar1').removeClass('bar1_on');
