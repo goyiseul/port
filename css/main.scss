@@ -838,6 +838,7 @@ a, a:link{
             >div{
                 width:80px;
                 height:80px;
+                border:1px solid $colorG;
                 &:nth-of-type(5n){
                     margin-right:10px;
                 }

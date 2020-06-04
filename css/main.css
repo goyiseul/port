@@ -1111,6 +1111,7 @@ a, a:link {
   #design .design_list > div {
     width: 80px;
     height: 80px;
+    border: 1px solid #4C6235;
   }
   #design .design_list > div:nth-of-type(5n) {
     margin-right: 10px;
