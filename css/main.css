@@ -1095,6 +1095,16 @@ a, a:link {
   #portfolio .port_contents_wrap div .button a {
     width: 180px;
   }
+  #design .design_title_wrap {
+    margin-bottom: 50px;
+  }
+  #design .design_title_wrap .title_text {
+    width: 100%;
+    text-align: center;
+  }
+  #design .design_title_wrap .title_text_bg {
+    height: 10px;
+  }
   #design .design_list {
     width: 360px;
   }

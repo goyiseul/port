@@ -830,6 +830,9 @@ a, a:link{
         }
     }
     #design{
+        .design_title_wrap{
+            @include m_title_bg;
+        }
         .design_list{
             width:360px;
             >div{
